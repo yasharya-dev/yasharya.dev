@@ -1,0 +1,10 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node (only if you use a local dev server like `npx serve`)
+node_modules/
+npm-debug.log*

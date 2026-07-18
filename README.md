@@ -31,12 +31,11 @@ Then open http://localhost:8000.
 .
 ├── index.html          # Landing page
 ├── experience.html     # Experience page
-├── styles/             # CSS
-├── scripts/            # JavaScript
-└── assets/             # Images and favicon
+├── styles.css          # Design tokens, components, and light/dark theming
+└── theme.js            # Light/dark toggle (vanilla JS)
 ```
 
-_(Update to match the actual files once the site is in.)_
+The favicon is an inline SVG data URI in each page's `<head>` (no image file). Archivo loads from Google Fonts via a non-render-blocking `<link>`.
 
 ## Deployment
 
