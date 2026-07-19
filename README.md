@@ -33,6 +33,9 @@ Then open http://localhost:8000.
 ├── experience.html     # Experience page
 ├── styles.css          # Design tokens, components, and light/dark theming
 ├── theme.js            # Light/dark toggle (vanilla JS)
+├── og.png              # Social preview card (Open Graph / Twitter)
+├── robots.txt          # Crawler policy + sitemap pointer
+├── sitemap.xml         # Page list for search engines
 └── wrangler.jsonc      # Cloudflare Workers config (static assets)
 ```
 
