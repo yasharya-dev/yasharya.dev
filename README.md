@@ -11,7 +11,7 @@ I'm a backend-leaning full-stack engineer; this is the site I point people to fr
 - Static HTML, CSS, and a little vanilla JavaScript, no framework
 - Light and dark mode
 - Built mobile-first and accessible (WCAG 2.1 AA)
-- Hosted on Cloudflare Pages (automatic HTTPS, deploys on push)
+- Hosted on Cloudflare Workers (static assets, automatic HTTPS, deploys on push)
 
 ## Running it locally
 
@@ -32,14 +32,15 @@ Then open http://localhost:8000.
 ├── index.html          # Landing page
 ├── experience.html     # Experience page
 ├── styles.css          # Design tokens, components, and light/dark theming
-└── theme.js            # Light/dark toggle (vanilla JS)
+├── theme.js            # Light/dark toggle (vanilla JS)
+└── wrangler.jsonc      # Cloudflare Workers config (static assets)
 ```
 
 The favicon is an inline SVG data URI in each page's `<head>` (no image file). Archivo loads from Google Fonts via a non-render-blocking `<link>`.
 
 ## Deployment
 
-Connected to Cloudflare Pages: pushing to `main` builds and deploys automatically, and the custom domain `yasharya.dev` points at the Pages project.
+Connected to Cloudflare Workers Builds via `wrangler.jsonc`: pushing to `main` deploys automatically (`npx wrangler deploy` uploads the static assets), and the custom domain `yasharya.dev` points at the Worker.
 
 ## Contact
 
