@@ -15,12 +15,12 @@ I'm a backend-leaning full-stack engineer; this is the site I point people to fr
 
 ## Running it locally
 
-No build step. Either open `index.html` directly, or serve the folder:
+No build step. Either open `public/index.html` directly, or serve the deploy root:
 
 ```bash
-python -m http.server 8000     # Python
+python -m http.server 8000 --directory public     # Python
 # or
-npx serve .                    # Node
+npx serve public                                  # Node
 ```
 
 Then open http://localhost:8000.
@@ -29,17 +29,20 @@ Then open http://localhost:8000.
 
 ```
 .
-├── index.html          # Landing page
-├── experience.html     # Experience page
-├── styles.css          # Design tokens, components, and light/dark theming
-├── theme.js            # Light/dark toggle (vanilla JS)
-├── og.png              # Social preview card (Open Graph / Twitter)
-├── favicon.ico         # Multi-size favicon (16/32/48), also picked up by Google Search
-├── favicon-96x96.png   # Larger favicon for high-DPI tabs and Google
-├── apple-touch-icon.png# iOS home-screen icon (180x180)
-├── robots.txt          # Crawler policy + sitemap pointer
-├── sitemap.xml         # Page list for search engines
-└── wrangler.jsonc      # Cloudflare Workers config (static assets)
+├── README.md               # This file (not deployed)
+├── wrangler.jsonc          # Cloudflare Workers config (not deployed)
+└── public/                 # Deploy root: everything below is served as-is
+    ├── index.html          # Landing page
+    ├── experience.html     # Experience page
+    ├── assets/
+    │   ├── styles.css      # Design tokens, components, and light/dark theming
+    │   └── theme.js        # Light/dark toggle (vanilla JS)
+    ├── og.png              # Social preview card (Open Graph / Twitter)
+    ├── favicon.ico         # Multi-size favicon (16/32/48), also picked up by Google Search
+    ├── favicon-96x96.png   # Larger favicon for high-DPI tabs and Google
+    ├── apple-touch-icon.png# iOS home-screen icon (180x180)
+    ├── robots.txt          # Crawler policy + sitemap pointer
+    └── sitemap.xml         # Page list for search engines
 ```
 
 Archivo loads from Google Fonts via a non-render-blocking `<link>`.
