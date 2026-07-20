@@ -34,12 +34,15 @@ Then open http://localhost:8000.
 ├── styles.css          # Design tokens, components, and light/dark theming
 ├── theme.js            # Light/dark toggle (vanilla JS)
 ├── og.png              # Social preview card (Open Graph / Twitter)
+├── favicon.ico         # Multi-size favicon (16/32/48), also picked up by Google Search
+├── favicon-96x96.png   # Larger favicon for high-DPI tabs and Google
+├── apple-touch-icon.png# iOS home-screen icon (180x180)
 ├── robots.txt          # Crawler policy + sitemap pointer
 ├── sitemap.xml         # Page list for search engines
 └── wrangler.jsonc      # Cloudflare Workers config (static assets)
 ```
 
-The favicon is an inline SVG data URI in each page's `<head>` (no image file). Archivo loads from Google Fonts via a non-render-blocking `<link>`.
+Archivo loads from Google Fonts via a non-render-blocking `<link>`.
 
 ## Deployment
 
