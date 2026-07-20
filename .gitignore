@@ -8,3 +8,10 @@ Thumbs.db
 # Node (only if you use a local dev server like `npx serve`)
 node_modules/
 npm-debug.log*
+
+# Wrangler local files
+.wrangler/
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

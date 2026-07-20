@@ -1,6 +1,9 @@
 {
   "name": "yasharya-dev",
   "compatibility_date": "2026-07-18",
+  "observability": {
+    "enabled": true
+  },
   "assets": {
     "directory": "."
   }
